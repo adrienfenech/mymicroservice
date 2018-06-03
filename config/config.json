@@ -1,0 +1,13 @@
+{
+  "environment": "development",
+  "hydra": {
+    "serviceName": "ms-demo-service",
+    "serviceIP": "",
+    "servicePort": 9000,
+    "serviceType": "processing",
+    "serviceDescription": "Demo micro-service processing message",
+    "redis": {
+      "url": "redis://127.0.0.1:6379/0"
+    }
+  }
+}

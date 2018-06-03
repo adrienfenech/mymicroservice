@@ -1,0 +1,24 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:9.2
+
+    working_directory: ~/server
+
+    steps:
+      - checkout
+
+      # install all dependencies
+      - run: yarn install
+
+      # run tests!
+      - run: yarn test
+
+      # stop server
+      - run: echo 'DONE'

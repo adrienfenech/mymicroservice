@@ -1,0 +1,26 @@
+{
+  "name": "ms-demo",
+  "description": "[MYPLATFORM][MICROSERVICE] Micro service for **myplatform** project, dedicated to nothing in particular, only a demo",
+  "main": "ms.js",
+  "scripts": {
+    "start": "node ms",
+    "test": "mocha **.spec.js"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "chai": "^4.1.2"
+  },
+  "dependencies": {
+    "ms-manager": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrienfenech/mymicroservice.git"
+  },
+  "author": "Adrien Fenech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrienfenech/mymicroservice/issues"
+  },
+  "homepage": "https://github.com/adrienfenech/mymicroservice#readme"
+}

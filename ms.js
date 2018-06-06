@@ -10,23 +10,7 @@
 const MM = require('ms-manager');
 const DM = require('./demoManager');
 let config = require(`./config/config.json`) || {};
-
 config['hydra']['redis']['url'] = process.env.REDIS_PORT + '/0';
-
-const logger = {
-    info: function() {
-        console.log('[info] ' + arguments);
-    },
-    log: function() {
-        console.log('[log] ' + arguments);
-    },
-    debug: function() {
-        console.log('[debug] ' + arguments);
-    },
-    error: function() {
-        console.error(arguments);
-    }
-};
 
 MM.init(config, (err, serviceInfo) => {
     if (err) {
@@ -44,7 +28,13 @@ MM.init(config, (err, serviceInfo) => {
          * and send back the answer
          */
         MM.subscribe('demo-message-sync', (bdy, msg) => {
+
+
             const result = DM.requestSyncMsg(bdy);
+
+
+
+
             if (result instanceof Error) {
                 return msg.replyErr(result);
             } else {

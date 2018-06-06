@@ -29,6 +29,10 @@ module.exports = {
     }
 };
 
+
+/**
+ * Processing message
+ */
 function processMsg(msg) {
     switch (msg) {
         case 'error': return new Error('This is an error.');

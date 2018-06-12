@@ -19,6 +19,3 @@ jobs:
 
       # run tests!
       - run: yarn test
-
-      # stop server
-      - run: echo 'DONE'

@@ -28,12 +28,7 @@ MM.init(config, (err, serviceInfo) => {
          * and send back the answer
          */
         MM.subscribe('demo-message-sync', (bdy, msg) => {
-
-
             const result = DM.requestSyncMsg(bdy);
-
-
-
 
             if (result instanceof Error) {
                 return msg.replyErr(result);
